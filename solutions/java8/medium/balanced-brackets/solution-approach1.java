@@ -6,12 +6,7 @@
 // Platform    HackerRank
 // Language    java8
 // Status      Accepted
-// Submitted   2026-07-18, 12:58 a.m.
-// Technique   stack-based-matching
-// Time        O(n)
-// Space       O(n)
-// Trick       The code uses the Stack class to track opening brackets and performs a pop operation when a matching closing bracket is found.
-// Hint        Stack is legacy; Deque is preferred for better performance.
+// Submitted   2026-07-18, 12:59 a.m.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
