@@ -7,6 +7,12 @@
 // Language    java8
 // Status      Accepted
 // Submitted   2026-07-24, 10:38 p.m.
+// Technique   dual-stack-max-tracking
+// Time        O(n)
+// Space       O(n)
+// Insight     The implementation maintains a secondary stack that stores the running maximum at each depth, ensuring that the current maximum is always accessible in constant time.
+// Interview   Before: "I would iterate through the stack to find the maximum for every type 3 query, resulting in O(n) per query." After: "By using a secondary stack to track the maximum at each level, I achieve O(1) for all operations, resulting in O(n) total time complexity for n queries."
+// Pitfalls    (1) Failing to synchronize the secondary stack with the primary stack during pop operations leads to incorrect maximum values.  (2) Assuming the stack is non-empty when performing pop or peek operations without checking the stack state violates the problem constraints.  (3) Using Integer.parseInt repeatedly inside the loop without caching values can slightly increase overhead in high-frequency query scenarios.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
