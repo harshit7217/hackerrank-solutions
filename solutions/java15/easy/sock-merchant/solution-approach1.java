@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-07-28, 09:14 a.m.
+// Technique   sorting-and-stack-matching
+// Time        O(n log n)
+// Space       O(n)
+// Insight     The algorithm sorts the input list to group identical colors, then uses a stack to identify pairs by popping the stack whenever the current element matches the top.
+// Interview   Before: "I could use a frequency map to count occurrences of each color." After: "Sorting the list allows me to pair adjacent identical elements using a stack, achieving O(n log n) time complexity and O(n) space complexity, which is efficient for the given constraints."
+// Pitfalls    (1) Sorting the list is mandatory for the stack-based pairing logic to function correctly.  (2) The stack approach relies on the sorted order to ensure that identical colors are adjacent, allowing the peek-and-pop logic to identify pairs.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
