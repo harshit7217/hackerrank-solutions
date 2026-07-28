@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-07-28, 10:31 a.m.
+// Technique   nested-loop-string-construction
+// Time        O(n^2)
+// Space       O(1)
+// Insight     The algorithm prints n lines where each line i contains n-1-i leading spaces followed by i+1 hash symbols.
+// Interview   Before: "How would you print a right-aligned staircase of size n?" After: "I use nested loops to print spaces and hashes, resulting in O(n^2) time complexity, ensuring the last line has zero leading spaces as required by the problem constraints."
+// Pitfalls    (1) Incorrectly calculating the number of spaces as n-i instead of n-1-i, which would cause the staircase to be misaligned.  (2) Using an incorrect loop range for the hash symbols, such as starting from 1 instead of 0, which would result in an incorrect number of characters per line.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
