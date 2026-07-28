@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-07-28, 09:16 a.m.
+// Technique   enhanced-for-loop-summation
+// Time        O(n)
+// Space       O(n)
+// Insight     The implementation iterates through the provided list once, accumulating each integer element into a running total variable.
+// Interview   Before: "I would use a standard for-loop with an index to access elements." After: "Using an enhanced for-loop is cleaner for read-only access, achieving O(n) time complexity where n is the number of elements in the array."
+// Pitfalls    (1) Integer overflow may occur if the sum of the array elements exceeds the maximum value of a 32-bit signed integer.  (2) The input parsing logic assumes the array elements are space-separated on a single line as specified in the input format.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
