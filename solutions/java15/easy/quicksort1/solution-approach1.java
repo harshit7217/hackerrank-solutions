@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-07-28, 10:38 a.m.
+// Technique   library-sort-function
+// Time        O(n log n)
+// Space       O(n)
+// Insight     The implementation uses the built-in library sort to order the entire array instead of performing the specific partitioning logic requested by the problem statement.
+// Interview   Before: "I will implement the partitioning logic by creating three separate lists for elements less than, equal to, and greater than the pivot." After: "I used the built-in sort which runs in O(n log n) time, though the problem specifically requested a linear O(n) partitioning approach."
+// Pitfalls    (1) The implementation ignores the specific divide-and-conquer partitioning requirement defined in the problem statement.  (2) Using a general-purpose sort results in O(n log n) time complexity, which is less efficient than the O(n) partitioning algorithm expected for this challenge.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
