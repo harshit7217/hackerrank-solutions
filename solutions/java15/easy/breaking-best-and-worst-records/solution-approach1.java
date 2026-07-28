@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-07-28, 10:11 a.m.
+// Technique   linear-scan-tracking-extremes
+// Time        O(n)
+// Space       O(1)
+// Insight     The algorithm maintains the current minimum and maximum values while iterating through the scores, incrementing counters only when a score strictly exceeds the current maximum or falls strictly below the current minimum.
+// Interview   Before: "I should initialize the min and max with infinity." After: "Actually, the first game score defines the initial record, so I initialize both with the first element. This O(n) approach correctly handles the strict inequality requirement for breaking records."
+// Pitfalls    (1) The code incorrectly swaps the logic for updating min and max, as it checks if min < i to update the minimum and max > i to update the maximum.  (2) The implementation fails to account for the first game score, which should not count as a record break, but the current logic logic is fundamentally flawed in its comparison operators.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
