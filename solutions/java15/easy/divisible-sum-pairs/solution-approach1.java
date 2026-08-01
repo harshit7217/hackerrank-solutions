@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-08-01, 02:13 p.m.
+// Technique   nested-loop-brute-force
+// Time        O(n^2)
+// Space       O(1)
+// Insight     The algorithm iterates through all unique pairs (i, j) where i < j and increments a counter whenever the sum of the elements at these indices is divisible by k.
+// Interview   Before: "I could use a frequency map to track remainders for O(n) time." After: "Given the constraints, a nested loop approach is sufficient and provides O(n^2) time complexity while maintaining O(1) space, ensuring all pairs i < j are checked against the divisor k."
+// Pitfalls    (1) Failing to maintain the index constraint i < j by starting the inner loop at zero instead of i + 1.  (2) Assuming the input array is sorted, which is not guaranteed by the problem statement.  (3) Neglecting the modulo operator behavior with negative sums if the input array contained negative integers, though constraints here specify positive integers.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
