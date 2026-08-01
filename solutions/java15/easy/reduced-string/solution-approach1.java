@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-08-01, 02:27 p.m.
+// Technique   stack-based-character-reduction
+// Time        O(n)
+// Space       O(n)
+// Insight     The algorithm maintains a stack where each incoming character is compared to the top element, resulting in a pop if they match or a push if they differ.
+// Interview   Before: "I would use a recursive approach to repeatedly find and remove adjacent duplicates." After: "Using a stack allows for a single-pass O(n) time and O(n) space solution that efficiently handles the reduction of adjacent characters until no more pairs remain."
+// Pitfalls    (1) Failing to handle the empty stack case after all reductions, which must return the string 'Empty String' as specified.  (2) Using string concatenation inside a loop, which can lead to O(n^2) performance in some Java environments due to repeated object creation.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
