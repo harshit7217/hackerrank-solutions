@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-08-01, 01:49 p.m.
+// Technique   lcm-gcd-range-scan
+// Time        O(n + m + (max(b)/lcm(a)))
+// Space       O(1)
+// Insight     The algorithm identifies all multiples of the least common multiple of array a that are also divisors of the greatest common divisor of array b.
+// Interview   Before: "I would iterate through every number between the arrays and check divisibility." After: "I optimized this to O(n + m + range/lcm) by calculating the LCM of array a and GCD of array b, then checking only multiples of the LCM up to the GCD."
+// Pitfalls    (1) Failing to handle the case where the LCM of array a exceeds the GCD of array b, resulting in an empty range.  (2) Assuming the input arrays are sorted, which is not guaranteed by the problem statement.  (3) Integer overflow when calculating the product of two numbers in the LCM function before division.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
