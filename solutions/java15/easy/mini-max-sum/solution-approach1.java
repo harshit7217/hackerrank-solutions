@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-08-01, 02:04 p.m.
+// Technique   sorting-and-linear-summation
+// Time        O(N log N)
+// Space       O(1)
+// Insight     The algorithm sorts the array to identify the four smallest and four largest elements, calculating their respective sums in linear time.
+// Interview   Before: "I could iterate through all combinations to find the min and max sums." After: "Sorting allows us to compute the min and max sums in O(N log N) time, which is efficient for five elements while preventing integer overflow by using long types."
+// Pitfalls    (1) Failing to use long integers for the sum, which causes overflow when the input integers are large.  (2) Incorrectly indexing the array during summation, which leads to including the wrong elements in the min or max calculation.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
